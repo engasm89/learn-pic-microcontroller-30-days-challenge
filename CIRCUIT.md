@@ -1,23 +1,16 @@
-# PIC Challenge — Circuit Schematic
+# Learn Pic Microcontroller 30 Days Challenge — Circuit Notes
 
-- Course: Learn PIC Microcontroller with this 30 Days Challenge
-- Author: Ashraf S A AlMadhoun
-- Link: https://www.udemy.com/course/pic-microcontroller-learn-pic-microcontroller-30-days-challenge/?couponCode=JULYMAXDICOUNT
+| Signal | Suggested Pin | Notes |
+| --- | --- | --- |
+| Sensor Input | A0 / GPIO | Adjust according to the PIC Microcontroller board you own. |
+| Actuator Output | D9 / PWM Pin | Use a transistor/driver for high-current loads. |
+| Status LED | D13 or onboard LED | Mirrors the runtime state for quick debugging. |
 
-## Connections
+## Wiring Checklist
 
-- LED `-> PIC GPIO` through resistor; Button `-> GPIO` with pull-up; Sensor `-> ADC`. UART to PC via TTL-
+1. Power rails first (5V / 3.3V and GND).
+2. Route sensor outputs to the analog/digital pin noted above.
+3. Add current-limiting resistors where appropriate.
+4. Double-check common grounds between modules and the development board.
 
-## Diagram (ASCII)
-
-```
- GPIO ---[330Ω]---|> LED --- GND
- Button -> GPIO (pull-up)
- Sensor -> ADC
- UART TX/RX -> USB-TTL
-```
-
-## Purchase With Discount
-
-Get a discounted price and build practical PIC circuits — use the course link above.
-
+Refer to the course lecture for the exact schematic; reuse these notes as a quick reference.
